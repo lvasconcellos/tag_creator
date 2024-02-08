@@ -1,4 +1,5 @@
 from unittest.mock import patch
+from test.mocks.mock_valid_response import MockResponse
 from src.drivers.barcode_handler import BarcodeHandler
 from src.controllers.tag_creator_controller import TagCreatorController
 
@@ -15,8 +16,4 @@ def test_create(mock_create_barcode):
 
     # assert
     assert isinstance(response, dict)
-    assert response == {"data": {
-        "count": 1,
-        "path": "image_path.png",
-        "type": "Tag Image"
-    }}
+    assert response == MockResponse.body

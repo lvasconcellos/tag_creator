@@ -1,5 +1,5 @@
-from src.validators.tag_creator_validator import TagCreatorValidator
 from src.errors.error_types.http_unprocessable_entity import HttpUnprocessableEntityError
+from src.validators.tag_creator_validator import TagCreatorValidator
 
 
 class MockRequest:
